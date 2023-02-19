@@ -11,11 +11,24 @@ import tkinter as tk
 #snow chain, and the width of the snow chain is matched with the width plus
 #roughly twice the height of the tire wall.
 
+h=0.05 #height of entry is 0.05% of frame
+w=0.90 #width is 90% of frame
+
+
 win = tk.Tk()
 win.title('Snow Chain Calculator')
 canvas = tk.Canvas(win,height=500,width=700,bg='black')
 canvas.pack()
 
+#we are now going to create three frame.
+frame1=tk.Frame(canvas,bg='#4287f5')
+frame1.place(relx=0.01,rely=0.20,relheight=0.6,relwidth=0.32)
+
+frame2=tk.Frame(canvas,bg='#4287f5')
+frame2.place(relx=0.34,rely=0.01,relheight=0.98,relwidth=0.32)
+
+frame3=tk.Frame(canvas,bg='#4287f5')
+frame3.place(relx=0.67,rely=0.20,relheight=0.60,relwidth=0.32)
 
 
 
