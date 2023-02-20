@@ -17,18 +17,21 @@ w=0.90 #width is 90% of frame
 
 win = tk.Tk()
 win.title('Snow Chain Calculator')
-canvas = tk.Canvas(win,height=500,width=700,bg='black')
+canvas = tk.Canvas(win,height=400,width=700,bg='black')
 canvas.pack()
 
 #we are now going to create three frame.
 frame1=tk.Frame(canvas,bg='#4287f5')
-frame1.place(relx=0.01,rely=0.20,relheight=0.6,relwidth=0.32)
+frame1.place(relx=0.01,rely=0.20,relheight=0.6,relwidth=0.327)
 
 frame2=tk.Frame(canvas,bg='#4287f5')
-frame2.place(relx=0.34,rely=0.01,relheight=0.98,relwidth=0.32)
+frame2.place(relx=0.338,rely=0.01,relheight=0.98,relwidth=0.327)
 
 frame3=tk.Frame(canvas,bg='#4287f5')
-frame3.place(relx=0.67,rely=0.20,relheight=0.60,relwidth=0.32)
+frame3.place(relx=0.666,rely=0.20,relheight=0.60,relwidth=0.327)
+
+entry1 = tk.Entry(frame1,bg='grey',fg='black',font=('',20))
+entry1.place(relx=0.01,rely=0.01,relheight=0.30,relwidth=0.98)
 
 
 
