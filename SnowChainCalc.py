@@ -14,6 +14,9 @@ import tkinter as tk
 h=0.05 #height of entry is 0.05% of frame
 w=0.90 #width is 90% of frame
 
+def entryBuilder(xpos=0.01,ypos=0.01):
+    entry1 = tk.Entry(frame1,bg='grey',fg='black',font=('',20))
+    entry1.place(relx=xpos,rely=ypos,relheight=0.30,relwidth=0.98)
 
 win = tk.Tk()
 win.title('Snow Chain Calculator')
@@ -30,10 +33,10 @@ frame2.place(relx=0.338,rely=0.01,relheight=0.98,relwidth=0.327)
 frame3=tk.Frame(canvas,bg='#4287f5')
 frame3.place(relx=0.666,rely=0.20,relheight=0.60,relwidth=0.327)
 
-entry1 = tk.Entry(frame1,bg='grey',fg='black',font=('',20))
-entry1.place(relx=0.01,rely=0.01,relheight=0.30,relwidth=0.98)
-
-
+entryBuilder(0.01,0.01)#build the first entry in frame1
+entryBuilder(0.01,0.32)#build the second entry in frame1
+entryBuilder(0.01,0.63)#build the 3rd entry in frame1
+#entryBuilder(0.01,0.01,frame2)#build the first entry in frame2
 
 
 win.mainloop()
