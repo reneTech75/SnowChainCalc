@@ -13,6 +13,7 @@ import tkinter as tk
 
 h=0.05 #height of entry is 0.05% of frame
 w=0.90 #width is 90% of frame
+names=['lefttop','leftMiddle','leftBottom','myEntry','middleTop','middleMiddle','middleBottom','rightTop','rightMiddle','rightBottom']
 
 def entryBuilder(xpos=0.01,ypos=0.01):
     entry1 = tk.Entry(frame1,bg='grey',fg='black',font=('',20))
