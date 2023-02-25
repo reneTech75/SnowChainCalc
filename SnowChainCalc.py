@@ -38,6 +38,3 @@ entryBuilder(0.01,0.01)#build the first entry in frame1
 entryBuilder(0.01,0.32)#build the second entry in frame1
 entryBuilder(0.01,0.63)#build the 3rd entry in frame1
 #entryBuilder(0.01,0.01,frame2)#build the first entry in frame2
-
-
-win.mainloop()
