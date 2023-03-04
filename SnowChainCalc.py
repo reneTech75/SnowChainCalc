@@ -50,4 +50,7 @@ entryBuilder('rightTop',rightFrame,0.01,0.01)#build lefttop entry
 entryBuilder('rightMiddle',rightFrame,0.01,0.32)#build leftmiddle entry
 entryBuilder('rightBottom',rightFrame,0.01,0.63)#build leftbottom entry
 
+#the calculate button
+cal=tk.Button(middleFrame,text='CALCULATE',font=('',20),bg='grey',fg='black',bd=4)
+cal.place(relx=0.01,rely=0.8,relheight=0.183,relwidth=0.98)
 win.mainloop()
