@@ -1,5 +1,6 @@
 from math import pi
 import tkinter as tk
+from PIL import ImageTk, Image
 
 #SNOW CHAIN DETERMINATION
 #The purpose of this application is to help the user see if a snow chain
@@ -13,7 +14,6 @@ import tkinter as tk
 
 h=0.05 #height of entry is 0.05% of frame
 w=0.90 #width is 90% of frame
-names=['lefttop','leftMiddle','leftBottom','myEntry','middleTop','middleMiddle','middleBottom','rightTop','rightMiddle','rightBottom']
 
 def entryBuilder(name,space,xpos=0.01,ypos=0.01,h=0.30):
     name = tk.Entry(space,bg='grey',fg='black',font=('',20))
@@ -21,8 +21,12 @@ def entryBuilder(name,space,xpos=0.01,ypos=0.01,h=0.30):
 
 win = tk.Tk()
 win.title('Snow Chain Calculator')
-canvas = tk.Canvas(win,height=400,width=700,bg='black')
+canvas = tk.Canvas(win,height=400,width=600,bg='black')
 canvas.pack()
+
+img = ImageTk.PhotoImage(Image.open("Atlanta.JPG").resize((600,400),Image.ANTIALIAS))
+canvas.background=img
+bg = canvas.create_image(0, 0, anchor=tk.NW, image=img)
 
 #we are now going to create three frame.
 leftFrame=tk.Frame(canvas,bg='#4287f5')
