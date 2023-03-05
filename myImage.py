@@ -1,23 +1,30 @@
+# this is a learning process on how to set an image as the background
+# of a tkinter GUI. The key thing here is the PIL module together with 
+# ImageTk and Image resouces in it. The resize() saves a lot of photo
+#editing time in just one stroke.
+
 # Import required libraries
-from tkinter import *
+import tkinter as tk
 from PIL import ImageTk, Image
 
 # Create an instance of tkinter window
-win = Tk()
+win = tk.Tk()
 
 # Define the geometry of the window
-win.geometry("700x500")
+win.geometry("500x500")
 
-frame = Frame(win, width=600, height=400)
-frame.place(relx=0.25,rely=0.25,relwidth=0.5,relheight=0.5)
+canvas=tk.Canvas(win,width=600,height=400)
+canvas.pack()
+#frame = Frame(win, width=600, height=400)
+#frame.place(relx=0.25,rely=0.25,relwidth=0.5,relheight=0.5)
 
 # Create an object of tkinter ImageTk
-img = ImageTk.PhotoImage(Image.open("birthdday.JPG"))
+img = ImageTk.PhotoImage(Image.open("Atlanta.JPG").resize((600,400),Image.ANTIALIAS))
+canvas.background=img
+bg = canvas.create_image(0, 0, anchor=tk.NW, image=img)
 
-# Create a Label Widget to display the text or Image
-label1 = Label(win,bg='grey',fg='black',text='help us')
-label1.place(relx=0.01,rely=0.01,relwidth=0.1,relheight=0.1)
-label = Button(frame, bd=4,image = img)
-label.pack()
+# Put a tkinter widget on the canvas.
+button = tk.Button(win, text="Start")
+button_window = canvas.create_window(10, 10, anchor=tk.NW, window=button)
 
 win.mainloop()
