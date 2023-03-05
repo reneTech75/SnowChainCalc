@@ -24,7 +24,8 @@ canvas.background=img
 bg = canvas.create_image(0, 0, anchor=tk.NW, image=img)
 
 # Put a tkinter widget on the canvas.
-button = tk.Button(win, text="Start")
-button_window = canvas.create_window(10, 10, anchor=tk.NW, window=button)
-
+#button = tk.Button(win, text="Start")
+#button_window = canvas.create_window(10, 10, anchor=tk.NW, window=button)
+button=tk.Button(canvas,bg='grey',text='start',fg='black',font=('',15),bd=3)
+button.place(relx=0.05,rely=0.05,relwidth=0.15,relheight=0.08)
 win.mainloop()
